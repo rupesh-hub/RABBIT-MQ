@@ -1,0 +1,45 @@
+RABBIT MQ
+---------
+1. RabbitMQ is a multi-language, open-source messaging software (message broker) that implements the AMQP (Advance Message Queuing Protocol) protocol.
+
+2. Simple message broker that can handle range of protocols and can be utilized to meet high-scale and high-availability requirements in both distributed and federated environments.
+
+3. The RabbitMQ server is written in the Erlang programming language and is clustered and failover-ready.
+
+4. Message queuing allows programs to communicate more effectively by sending out messages asynchronously.
+
+5. It also functions as a temporary storage location for messages while the destination application is busy or unavailable.
+
+6. Using asynchronous communication, programs that generate and consume messages can communicate with a message queue, where the sender and receiver don't need to interact at the same time.
+
+What is RabbitMQ Exchange ?
+---------------------------
+1. In RabbitMQ, a producer never delivers a message straight to a message queue. Instead, it makes use of 'exchange' as a routing middleman.
+2. As a result, the RabbitMQ exchange determines if the message is routed to one queue, several queues, or is simply discarded.
+
+3. RabbitMQ exchanges are message routing agents configured by the virtual host in RabbitMQ.
+
+4. Exchange is in charge of routing messages to different queues using header attributes, binding, and routing keys.
+
+Role of RabbitMQ Exchange
+-------------------------
+RabbitMQ's exchange is used as a routing mediator, to receive message from producers and push them to message queues according to rules provided by the RabbitMQ exchange type.
+
+Each RabbitMQ exchange type uses a separate set of parameters and binding to route the message. Clients get the option to create their own exchanges or use the default exchanges.
+
+RabbitMQ Message Cycle
+----------------------
+RabbitMQ Message Cycle Concepts
+-------------------------------
+1. Producers/Publisher
+-> Producers/Publishes are operators who send the job to RabbitMQ exchanges. Just like postmen, who simply route mail to specified postboxes, RabbitMQ exchanges simply route tasks to certain queues.
+
+2. Task
+-> A task is a technical data that is sent to be exchanged.
+	(Just like main that the postman delivers to the mailbox)
+
+3. Queue
+-> Just like a postbox that holds all our mails, a queue is a container that holds all your jobs, which are processed in a first-in-first-out (FIFO) fashion. In FIFO, messages that are received first are processed first, and sent first, i.e. processing, and delivery happens in the order it is received.
+
+4. Binding
+-> A binding is a "connection" that you build between a queue and an exchange.
